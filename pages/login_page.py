@@ -10,7 +10,7 @@ class LoginPage(BasePage):
 
     def should_be_login_url(self):
         # реализуйте проверку на корректный url адрес driver.current_url
-        assert self.browser.current_url.find("login") == -1, "Login is not presented in URL"
+        assert self.browser.current_url.find("login") != -1, "Login is not presented in URL"
         # assert True
 
     def should_be_login_form(self):
